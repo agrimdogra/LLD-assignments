@@ -29,8 +29,11 @@ public class HotelController {
         System.out.println("Raw Request Body: " + hotelRequestDTo);
         Hotel hotel = Hotel.builder()
                 .hotelName(hotelRequestDTo.getHotelName())
+                .location(hotelRequestDTo.getHotelLocation())
                 .address(hotelRequestDTo.getHotelAddress())
                 .floors(hotelRequestDTo.getNumOfFloors())
+                .createdAt(LocalDateTime.now())
+                .modifiedAt(LocalDateTime.now())
                 .build();
         Hotel hotel1 = hotelService.addHotel(hotel);
     }

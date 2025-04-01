@@ -18,7 +18,6 @@ import java.util.List;
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Entity
 public class Booking extends  BaseModel {
     @Enumerated(EnumType.STRING)
