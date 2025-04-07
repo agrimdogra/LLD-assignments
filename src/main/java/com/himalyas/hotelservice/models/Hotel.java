@@ -18,11 +18,12 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Hotel extends BaseModel{
+public class Hotel extends BaseModel {
     private String hotelName;
     private String location;
     private String address;
     private int floors;
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)
     private List<Room> rooms;
+
 }

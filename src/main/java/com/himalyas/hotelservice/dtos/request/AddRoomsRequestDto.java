@@ -14,6 +14,6 @@ import java.util.List;
 @Getter
 @Setter
 public class AddRoomsRequestDto {
-    private Long hotelId;
-    private List<Long> rooms;
+//    private Long hotelId;
+    private List<Long> roomsIds;
 }

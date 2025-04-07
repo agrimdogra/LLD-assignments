@@ -10,12 +10,13 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
 @Getter
 @Setter
-@Builder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -26,4 +27,6 @@ public class Invoice extends  BaseModel {
     private int billingAmount;
     @OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL)
     private List<Payment> payments;
+    private Integer remainingAmount;
+    private Boolean isPaymentComplete;
 }

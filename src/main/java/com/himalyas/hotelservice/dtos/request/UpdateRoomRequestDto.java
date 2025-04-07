@@ -16,4 +16,7 @@ public class UpdateRoomRequestDto {
     private Long roomId;
     private Long bookingId;
     private RoomStatus roomStatus;
+    private Integer roomNumber;
+    private Integer floorNumber;
+    private Long hotelId;
 }

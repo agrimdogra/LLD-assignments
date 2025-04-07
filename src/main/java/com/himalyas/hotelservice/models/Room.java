@@ -23,8 +23,8 @@ public class Room extends BaseModel {
     @ManyToOne
     @JoinColumn(name = "booking_id")
     private Booking booking;
-    private int roomNumber;
-    private int floor;
+    private Integer roomNumber;
+    private Integer floor;
     @Enumerated(EnumType.STRING)
     private RoomType roomType;
     @ManyToOne

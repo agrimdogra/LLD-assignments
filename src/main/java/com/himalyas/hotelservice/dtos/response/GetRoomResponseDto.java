@@ -14,6 +14,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,4 +28,7 @@ public class GetRoomResponseDto {
     private int floor;
     private RoomType roomType;
     private String hotelName;
+    private LocalDateTime checkInDate;
+    private LocalDateTime checkOutDate;
+    private Integer numberOfGuests;
 }

@@ -10,7 +10,9 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
@@ -18,6 +20,8 @@ import java.util.List;
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Booking extends  BaseModel {
     @Enumerated(EnumType.STRING)
@@ -28,6 +32,7 @@ public class Booking extends  BaseModel {
     private List<Room> rooms;
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private User guest;
-    private int numberOfGuests;
+    private Guest guest;
+    private Integer numberOfGuests;
+    private Staff bookedBy;
 }
